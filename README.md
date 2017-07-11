@@ -1,24 +1,14 @@
-# README
+# Devise with Hypetloop Tutorial
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+New rails app
+`rails new devise_tutorial`
+`bundel install`
 
-Things you may want to cover:
+Create a User model
+`rails g model User first_name:string last_name:string email:string`
+`rake db:migrate`
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Install devise
+`gem 'devise'`
+`bundle install`
+`rails generate devise:install`
