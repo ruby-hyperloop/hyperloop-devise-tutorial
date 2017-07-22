@@ -154,11 +154,10 @@ To get Hyperloop to see the Devise `current_user` we simply alias the method
 ```
 
 
-
 ------------------
+notes:
 
 So you were asking about how to integrate devise and get the current user on the client right?
-
 
 also I'm sorry about this, but while I showed you what I think is the "right" way to do it... there is an easier way.
 
@@ -175,13 +174,15 @@ yes better to place to start... sorry about that
 
 You can also keep you code tidy by doing the following as well:
 
+```
 class User < ...
   def self.current
     find(Hyperloop::Application.acting_user_id) if Hyperloop::Application.acting_user_id
   end
 end
+```
 
-# now you can say User.current on the client
+now you can say User.current on the client
 
 -------------
 
