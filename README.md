@@ -21,9 +21,9 @@ If you are adding Devise or Hyperloop to an existing app, please ensure that you
 
 ### Keeping Devise code on the server
 
-Assuming you have completed all the setps above, there is one last configuration step we need to perform. Devise has added code to our User model which we want on the server but not on the client. To achieve this we simply wrap the code in an `unless RUBY_ENGINE == 'opal'` test.
+Assuming you have completed all the setps above, there is one last configuration step we need to perform. Devise has added code to our User model which we want on the server but not on the client.
 
-Add the test to the `devise` macro in your User model like this:
+To achieve this we simply wrap the `devise` macro in an `unless RUBY_ENGINE == 'opal'` test:
 
 ```ruby
 # app/hyperloop/models/user.rb
@@ -181,11 +181,10 @@ As this tutorial is not about Devise but rather its connection to Hyperloop, we 
 
 Devise needs to augment our User model so we will run a generator for that:
 
-`rails g devise User`
-
-Then migrate again:
-
-`rails db:migrate`
+```
+rails g devise User
+rails db:migrate
+```
 
 At this point, Devise should be setup and working. Let's test that by starting your Rails server and navigating to:
 
