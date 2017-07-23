@@ -32,9 +32,7 @@
 
     def render
       div do
-        # P {"Helloworld - #{User.current.email}"} if User.current
-        puts Hyperloop::Application.acting_user_id
-
+        H1 {"Helloworld - #{User.current.email}"}
       end
     end
   end

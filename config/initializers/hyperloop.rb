@@ -1,4 +1,4 @@
 
 Hyperloop.configuration do |config|
-  config.transport = :none
+  config.transport = :action_cable
 end
