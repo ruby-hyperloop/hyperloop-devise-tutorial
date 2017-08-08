@@ -1,5 +1,4 @@
-# Using Devise with Hyperloop Tutorial
-
+## <i class="flaticon-professor-teaching"></i><span class="bigfirstletter">D</span>evise with Hyperloop Tutorial
 
 This tutorial will demonstrate how to use the popular [Devise Gem](https://github.com/plataformatec/devise) with Hyperloop. In this tutorial, we will be using the standard Devise user session ERB views for all Devise related activity (creating the user, changing the password, etc), and demonstrating how Hyperloop co-exists with Devise.
 
